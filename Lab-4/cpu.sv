@@ -37,13 +37,13 @@ module cpu #(
         .rd1 (ALUop1),
         .rd2 (regOp2),
         .a0 (a0)
-    )
+    );
 
     ALUmux ALUmux (
         .regOp2 (regOp2),
         .ImmOp (ImmOp),
         .ALUop2 (ALUop2)
-    )
+    );
 
     ALU ALU (
         .ALUop1 (ALUop1),
@@ -51,29 +51,30 @@ module cpu #(
         .sum (ALUout),
         .eq (eq),
         .ALUctrl (ALUctrl)
-    )
+    );
 
     SignExtend SignExtend (
         .ImmOp (ImmOp),
         .ImmSrc (ImmSrc),
         .instr (insrt)
-    )
+    );
 
     InstrMem InstrMem (
         .instr (instr),
         .PC    (pc),
-    )
+    );
 
     PC_register PCReg (
         .PC     (pc),
         .inc    (next_pc)
-    )
+    );
+    
     next_PC PCMux (
         .next_PC (next_pc),
         .PC (pc),
         .ImmOp (ImmOp)
         .PCsrc (PCsrc)
-    )
+    );
 
     ControlUnit ControlUnit (
         .instr (instr),
@@ -83,6 +84,6 @@ module cpu #(
         .ALUsrc (ALUsrc),
         .ImmSrc (ImmSrc),
         .PCsrc (PCsrc)
-    )
+    );
 
 endmodule
