@@ -17,7 +17,7 @@ module cpu #(
     logic [DATA_WIDTH-1:0] rs1;
     logic [DATA_WIDTH-1:0] rs2;
     logic [DATA_WIDTH-1:0] rd;
-    logic [DATA_WIDTH-1:0] RegWrite;
+    logic                  RegWrite;
 
     logic [DATA_WIDTH-1:0] ImmOp;          // Interconnecting Wires For Sign Extend
     logic                  ImmSrc;
