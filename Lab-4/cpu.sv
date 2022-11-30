@@ -67,7 +67,8 @@ module cpu #(
     PC_register PCReg (
         .PC     (pc),
         .inc    (next_pc),
-        .clk    (clk)
+        .clk    (clk),
+        .rst    (rst)
     );
     
     next_PC PCMux (
