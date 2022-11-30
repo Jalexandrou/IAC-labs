@@ -60,13 +60,14 @@ module cpu #(
     );
 
     InstrMem InstrMem (
-        .instr (instr),
-        .PC    (pc)
+        .instr  (instr),
+        .PC     (pc)
     );
 
     PC_register PCReg (
         .PC     (pc),
-        .inc    (next_pc)
+        .inc    (next_pc),
+        .clk    (clk)
     );
     
     next_PC PCMux (
