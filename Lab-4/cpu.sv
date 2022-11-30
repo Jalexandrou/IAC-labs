@@ -39,7 +39,7 @@ module cpu #(
         .a0 (a0)
     );
 
-    ALUmux ALUmux (
+    mux ALUmux (
         .regOp2 (regOp2),
         .ImmOp (ImmOp),
         .ALUop2 (ALUop2)
