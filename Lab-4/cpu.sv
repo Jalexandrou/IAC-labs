@@ -72,7 +72,7 @@ module cpu #(
     next_PC PCMux (
         .next_PC (next_pc),
         .PC (pc),
-        .ImmOp (ImmOp)
+        .ImmOp (ImmOp),
         .PCsrc (PCsrc)
     );
 
