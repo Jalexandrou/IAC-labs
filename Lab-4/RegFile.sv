@@ -1,6 +1,6 @@
 module RegFile #(
-    parameter ADDRESS_WIDTH = 32;
-    parameter DATA_WIDTH = 32;
+    parameter   ADDRESS_WIDTH = 32,
+                DATA_WIDTH = 32
 )(
     input  logic                         clk,
     input  logic     [ADDRESS_WIDTH-1:0] ad1,
