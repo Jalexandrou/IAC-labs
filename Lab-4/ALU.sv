@@ -19,7 +19,7 @@ module ALU #(
             SLT: ALUOut = (ALUop1 < ALUop2) ? 1 : 0;
             default: ALUOut = ALUop1 + ALUop2;
         endcase
-        if (ALUop1 = ALUop2) eq = 1;
+        if (ALUop1 == ALUop2) eq = 1;
         else                 eq = 0;
     end;
 
