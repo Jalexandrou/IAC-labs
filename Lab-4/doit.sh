@@ -2,12 +2,12 @@
 
 # cleanup
 rm -rf obj_dir
-rm -f __FILENAME__.vcd
+rm -f cpu.vcd
 
 sudo chmod -R 777 $(<vbuddy.cfg)
 
-verilator -Wall --cc --trace __FILENAME__.sv --exe __FILENAME___tb.cpp
+verilator -Wall --cc --trace cpu.sv --exe cpu_tb.cpp
 
-make -j -C obj_dir/ -f V__FILENAME__.mk V__FILENAME__
+make -j -C obj_dir/ -f Vcpu.mk Vcpu
 
-obj_dir/V__FILENAME__
+obj_dir/Vcpu

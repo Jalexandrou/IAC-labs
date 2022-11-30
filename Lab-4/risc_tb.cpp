@@ -1,4 +1,4 @@
-#include "V__FILENAME__.h"
+#include "Vcpu.h"
 #include "verilated.h"
 #include "verilated_vcd_c.h"
 #include "vbuddy.cpp"
@@ -10,13 +10,13 @@ int main(int argc, char **argv, char **env) {
     int clk;
 
     Verilated::commandArgs(argc, argv);
-    V__FILENAME__* top = new V__FILENAME__;
+    Vcpu* top = new Vcpu;
 
     Verilated::traceEverOn(true);
     VerilatedVcdC* tfp = new VerilatedVcdC;
 
     top->trace(tfp, 99);
-    tfp->open ("__FILENAME__.vcd");
+    tfp->open ("cpu.vcd");
 
     if (vbdOpen()!=1) return (-1);
 
