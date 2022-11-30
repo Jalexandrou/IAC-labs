@@ -8,15 +8,15 @@ module ALU #(
     output logic                    eq
 );
 
-    typedef enum bit[2:0] {add, subtract, and, or, slt = 5} func;
+    typedef enum bit[2:0] {ADD, SUBTRACT, AND, OR, SLT = 5} func;
 
     always_comb begin
         case(ALUctrl)
-            add: ALUOut = ALUop1 + ALUop2;
-            subtract: ALUOut = ALUop1 - ALUop2;
-            and: ALUOut = ALUop1 & ALUop2;
-            or: ALUOut = ALUop1 | ALUop2;
-            slt: ALUOut = (ALUop1 < ALUop2) ? 1 : 0;
+            ADD: ALUOut = ALUop1 + ALUop2;
+            SUBTRACT: ALUOut = ALUop1 - ALUop2;
+            AND: ALUOut = ALUop1 & ALUop2;
+            OR: ALUOut = ALUop1 | ALUop2;
+            SLT: ALUOut = (ALUop1 < ALUop2) ? 1 : 0;
             default: ALUOut = ALUop1 + ALUop2;
         endcase
         if (ALUop1 = ALUop2) eq = 1;
