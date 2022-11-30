@@ -2,7 +2,7 @@ module next_PC #(
     parameter WIDTH = 32
 )(
     // interface signals
-    input logic             PC,         //PC cycle
+    input logic [WIDTH-1:0] PC,         //PC cycle
     input logic             ImmOp,      //Immediate Operand 
     input logic             PCsrc,      //PC src 
     output logic [WIDTH-1:0] next_PC    //next PC output
