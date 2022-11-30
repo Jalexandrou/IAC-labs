@@ -61,7 +61,7 @@ module cpu #(
 
     InstrMem InstrMem (
         .instr (instr),
-        .PC    (pc),
+        .PC    (pc)
     );
 
     PC_register PCReg (
