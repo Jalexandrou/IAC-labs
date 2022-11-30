@@ -57,7 +57,7 @@ module cpu #(
     SignExtend SignExtend (
         .ImmOp (ImmOp),
         .ImmSrc (ImmSrc),
-        .instr (insrt)
+        .instr (instr)
     );
 
     InstrMem InstrMem (
