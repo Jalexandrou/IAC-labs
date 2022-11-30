@@ -9,7 +9,7 @@ module cpu #(
     logic [DATA_WIDTH-1:0] ALUop1;          // Interconnecting Wires For ALU
     logic [DATA_WIDTH-1:0] ALUop2;
     logic [DATA_WIDTH-1:0] ALUOut;
-    logic                  ALUctrl;
+    logic [2:0]            ALUctrl;
     logic                  ALUsrc;
     logic                  eq;
 
