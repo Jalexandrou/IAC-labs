@@ -2,10 +2,10 @@ module PC_register #(
     parameter WIDTH = 32
 )(
     // interface signals
-    input logic             clk,    //clock
-    input logic             rst,    //reset
-    input logic             inc,    //increment 
-    output logic [WIDTH-1:0] PC     //PC output
+    input logic                 clk,    //clock
+    input logic                 rst,    //reset
+    input logic  [WIDTH-1:0]    inc,    //increment 
+    output logic [WIDTH-1:0]    PC     //PC output
 );
 
 always_ff @ (posedge clk)
