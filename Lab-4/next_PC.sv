@@ -9,10 +9,10 @@ module next_PC #(
 );
 
     logic [WIDTH-1:0]   branch_PC;
-    logic               inc_PC;
+    logic [WIDTH-1:0]   inc_PC;
 
     assign branch_PC = PC + ImmOp;
-    assign inc_PC = PC + 3'b100;
+    assign inc_PC = PC + WIDTH{3'b100};
     assign next_PC= PCsrc ? branch_PC : inc_PC;
     
 endmodule
