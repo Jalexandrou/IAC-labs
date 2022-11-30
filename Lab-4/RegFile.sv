@@ -13,7 +13,7 @@ module RegFile #(
     output logic     [DATA_WIDTH-1:0]    a0
 );
 
-    logic [DATA_WIDTH-1:0] reg_file [2**ADDRESS_WIDTH=1:0];
+    logic [DATA_WIDTH-1:0] reg_file [2**ADDRESS_WIDTH-1:0];
 
     always_ff @(posedge clk) begin
         if (we3 == 1'b1)
