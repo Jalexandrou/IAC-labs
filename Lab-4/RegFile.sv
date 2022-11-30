@@ -8,7 +8,7 @@ module RegFile #(
     input  logic     [ADDRESS_WIDTH-1:0] ad3,
     input  logic                         we3,
     input  logic     [DATA_WIDTH-1:0]    wd3,
-    output logic     [DATA-WIDTH-1:0]    rd1,
+    output logic     [DATA_WIDTH-1:0]    rd1,
     output logic     [DATA_WIDTH-1:0]    rd2,
     output logic     [DATA_WIDTH-1:0]    a0
 );
