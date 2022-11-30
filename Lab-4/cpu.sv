@@ -20,7 +20,7 @@ module cpu #(
     logic                  RegWrite;
 
     logic [DATA_WIDTH-1:0] ImmOp;          // Interconnecting Wires For Sign Extend
-    logic                  ImmSrc;
+    logic [2:0]            ImmSrc;
 
     logic [DATA_WIDTH-1:0] instr;           // Interconnecting Wires For PC
     logic [DATA_WIDTH-1:0] pc;
