@@ -2,9 +2,9 @@ module cpu #(
     parameter   ADDRESS_WIDTH = 32,           // Parameters
                 DATA_WIDTH = 32
 )(
-    input logic            clk,             // Input/Output Logic
-    input logic            rst,
-    output logic           a0                  
+    input logic                     clk,      // Input/Output Logic
+    input logic                     rst,
+    output logic [DATA_WIDTH-1:0]   a0                  
 );
     logic [DATA_WIDTH-1:0] ALUop1;          // Interconnecting Wires For ALU
     logic [DATA_WIDTH-1:0] ALUop2;
