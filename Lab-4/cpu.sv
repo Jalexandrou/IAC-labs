@@ -48,7 +48,7 @@ module cpu #(
     ALU ALU (
         .ALUop1 (ALUop1),
         .ALUop2 (ALUop2),
-        .sum (ALUout),
+        .ALUout (ALUout),
         .eq (eq),
         .ALUctrl (ALUctrl)
     );
