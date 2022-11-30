@@ -1,3 +1,5 @@
+/* verilator lint_off UNOPTFLAT */
+
 module cpu #(
     parameter   DATA_WIDTH = 32           // Parameters
 )(

@@ -23,7 +23,7 @@ int main(int argc, char **argv, char **env) {
     top->clk = 1;
     top->rst = 0;
 
-    for (i=0; i<1000000; i++) {
+    for (i=0; i<1000; i++) {
 
         for (clk=0; clk<2; clk++) {
             tfp->dump (2*i+clk);
@@ -33,6 +33,7 @@ int main(int argc, char **argv, char **env) {
 
         vbdHex(1, top->a0 & 0xF);
         vbdBar(top->a0 & 0xFF);
+        vbdCycle(i);
 
         if (Verilated::gotFinish() || (vbdGetkey()=='q')) exit(0);
 

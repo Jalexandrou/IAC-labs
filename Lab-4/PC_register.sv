@@ -10,6 +10,6 @@ module PC_register #(
 
 always_ff @ (posedge clk)
     if (rst) PC <= {WIDTH{1'b0}};       
-    else     PC <= PC + inc;
+    else     PC <= inc;
     
 endmodule

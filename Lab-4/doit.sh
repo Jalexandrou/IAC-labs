@@ -4,7 +4,7 @@
 rm -rf obj_dir
 rm -f cpu.vcd
 
-sudo chmod -R 777 $(<vbuddy.cfg)
+sudo chmod -R 777 /dev/ttyS3
 
 verilator -Wall --cc --trace cpu.sv --exe cpu_tb.cpp
 
