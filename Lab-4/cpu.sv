@@ -14,9 +14,9 @@ module cpu #(
     logic                  eq;
 
     logic [DATA_WIDTH-1:0] regOp2;         // Interconnecting Wires For RegFile
-    logic [DATA_WIDTH-1:0] rs1;
-    logic [DATA_WIDTH-1:0] rs2;
-    logic [DATA_WIDTH-1:0] rd;
+    logic [ADDRESS_WIDTH-1:0] rs1;
+    logic [ADDRESS_WIDTH-1:0] rs2;
+    logic [ADDRESS_WIDTH-1:0] rd;
     logic                  RegWrite;
 
     logic [DATA_WIDTH-1:0] ImmOp;          // Interconnecting Wires For Sign Extend
