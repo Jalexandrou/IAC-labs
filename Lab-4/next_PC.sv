@@ -3,7 +3,7 @@ module next_PC #(
 )(
     // interface signals
     input logic [WIDTH-1:0] PC,         //PC cycle
-    input logic             ImmOp,      //Immediate Operand 
+    input logic [WIDTH-1:0] ImmOp,      //Immediate Operand 
     input logic             PCsrc,      //PC src 
     output logic [WIDTH-1:0] next_PC    //next PC output
 );
