@@ -8,10 +8,11 @@ module next_PC #(
     output logic [WIDTH-1:0] next_PC    //next PC output
 );
 
-    logic branch_PC, inc_PC;
+    logic [WIDTH-1:0]   branch_PC;
+    logic               inc_PC;
 
-    assign branch_PC= PC + ImmOp;
-    assign inc_PC= PC + 3'b100;
+    assign branch_PC = PC + ImmOp;
+    assign inc_PC = PC + 3'b100;
     assign next_PC= PCsrc ? branch_PC : inc_PC;
     
 endmodule
