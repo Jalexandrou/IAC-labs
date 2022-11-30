@@ -31,8 +31,8 @@ int main(int argc, char **argv, char **env) {
             top->eval ();
         }
 
-        vbdHex(1, top->__a0__ & 0xF);
-        vbdBar(top->__a0__ & 0xFF);
+        vbdHex(1, top->a0 & 0xF);
+        vbdBar(top->a0 & 0xFF);
 
         if (Verilated::gotFinish() || (vbdGetkey()=='q')) exit(0);
 
