@@ -8,7 +8,7 @@ module cpu #(
 );
     logic [DATA_WIDTH-1:0] ALUop1;          // Interconnecting Wires For ALU
     logic [DATA_WIDTH-1:0] ALUop2;
-    logic [DATA_WIDTH-1:0] ALUout;
+    logic [DATA_WIDTH-1:0] ALUOut;
     logic                  ALUctrl;
     logic                  ALUsrc;
     logic                  eq;
@@ -33,7 +33,7 @@ module cpu #(
         .ad2 (rs2),
         .ad3 (rd),
         .we3 (RegWrite),
-        .wd3 (ALUout),
+        .wd3 (ALUOut),
         .rd1 (ALUop1),
         .rd2 (regOp2),
         .a0 (a0)
@@ -48,7 +48,7 @@ module cpu #(
     ALU ALU (
         .ALUop1 (ALUop1),
         .ALUop2 (ALUop2),
-        .ALUout (ALUout),
+        .ALUOut (ALUOut),
         .eq (eq),
         .ALUctrl (ALUctrl)
     );
