@@ -1,5 +1,5 @@
 module RegFile #(
-    parameter   ADDRESS_WIDTH = 32,
+    parameter   ADDRESS_WIDTH = 5,
                 DATA_WIDTH = 32
 )(
     input  logic                         clk,
@@ -20,9 +20,9 @@ module RegFile #(
             reg_file[ad3] <= wd3;
     end
 
-    always_comb begin
-            rd1 <= reg_file[ad1];
-            rd2 <= reg_file[ad2];
-    end
+    
+    assign rd1 = reg_file[ad1];
+    assign  rd2 = reg_file[ad2];
+    assign  a0 = reg_file[5'b0];
     
 endmodule

@@ -1,7 +1,7 @@
 module SignExtend #(
     parameter   INSTR_WIDTH = 32
 )(
-    input logic     [INSTR_WIDTH-1:0]      instr,
+    input logic                [31:7]      instr,
     input logic                 [2:0]      ImmSrc,
     output logic    [INSTR_WIDTH-1:0]      ImmOp
 );

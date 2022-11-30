@@ -1,6 +1,5 @@
 module cpu #(
-    parameter   ADDRESS_WIDTH = 32,           // Parameters
-                DATA_WIDTH = 32
+    parameter   DATA_WIDTH = 32           // Parameters
 )(
     input logic                     clk,      // Input/Output Logic
     input logic                     rst,
@@ -14,9 +13,6 @@ module cpu #(
     logic                  eq;
 
     logic [DATA_WIDTH-1:0] regOp2;         // Interconnecting Wires For RegFile
-    logic [ADDRESS_WIDTH-1:0] rs1;
-    logic [ADDRESS_WIDTH-1:0] rs2;
-    logic [ADDRESS_WIDTH-1:0] rd;
     logic                  RegWrite;
 
     logic [DATA_WIDTH-1:0] ImmOp;          // Interconnecting Wires For Sign Extend
@@ -29,9 +25,9 @@ module cpu #(
 
     RegFile RegFile (          
         .clk (clk),
-        .ad1 (rs1),
-        .ad2 (rs2),
-        .ad3 (rd),
+        .ad1 (instr[19:15]),
+        .ad2 (instr[24:20]),
+        .ad3 (instr[11:7]),
         .we3 (RegWrite),
         .wd3 (ALUOut),
         .rd1 (ALUop1),
@@ -57,7 +53,7 @@ module cpu #(
     SignExtend SignExtend (
         .ImmOp (ImmOp),
         .ImmSrc (ImmSrc),
-        .instr (instr)
+        .instr (instr[31:7])
     );
 
     InstrMem InstrMem (
@@ -80,7 +76,7 @@ module cpu #(
     );
 
     ControlUnit ControlUnit (
-        .instr (instr),
+        .instr (instr[6:0]),
         .EQ    (eq),
         .RegWrite (RegWrite),
         .ALUctrl (ALUctrl),

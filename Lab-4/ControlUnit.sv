@@ -1,8 +1,6 @@
-module ControlUnit #(
-    parameter   INSTR_WIDTH = 32
-)(
+module ControlUnit #()(
 	input 	logic               EQ,
-	input 	[INSTR_WIDTH-1:0]   instr,	
+	input 	[6:0]   			instr,	
 	output 	logic               RegWrite,	// enable to write regs
 	output 	[2:0]               ALUctrl,
 	output 	logic               ALUsrc,		
